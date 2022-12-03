@@ -1,3 +1,5 @@
+import { ActionTypes } from "./ActionTypes";
+
 export const initialState = {
     firstName: '',
     lustName: '',
@@ -10,36 +12,18 @@ export const initialState = {
 };
 
 export const reducer = (state, action) => {
-    //  console.log(action)
     switch (action.type) {
-        case 'INPUT':
+        case ActionTypes.INPUT:
             return {
                 ...state,
                 [action.payload.name]: action.payload.value,
             };
-        case 'TOGGLE':
+        case ActionTypes.TOGGLE:
             return {
                 ...state,
                 term: state.term,
             };
-      /*   case 'INCREMENT':
-            return {
-                ...state,
-                term: !state.term,
-            };
-        case 'INCREMENT':
-            return {
-                ...state,
-                term: !state.term,
-            }; */
         default:
             return state;
     }
-
-    /*     if(action.type === 'INPUT'){
-            return{
-                ...state,
-                [action.payload.name] : action.payload.value,
-            };
-        }; */
 };
