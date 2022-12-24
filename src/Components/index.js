@@ -3,4 +3,4 @@ console.log(player);
 
 player = [{name: 'Mashrafi'}];
 
-//console.log(player);
+console.log(player);
